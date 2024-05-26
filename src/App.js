@@ -5,27 +5,26 @@ import Contact from './components/pages/Contact'
 import Company from './components/pages/Company'
 import NewProject from './components/pages/NewProject'
 import Container from './components/layouts/Container';
+import NavBar from './components/layouts/NavBar'
+import Footer from './components/layouts/Footer'
+import Projects from './components/pages/Projects';
 
 function App() {
   return (
     <Router>
-      <ul style={{ display: 'flex', listStyleType: 'none', padding: 0 }}>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/contact'>Contact</Link></li>
-        <li><Link to='/company'>Company</Link></li>
-        <li><Link to='/newproject'>New Project</Link></li>
-      </ul>
-
+      <NavBar/>
+      
       <Container customClass="min-height">
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/company" element={<Company/>} />
-          <Route path="/newproject" element={<NewProject/>} />
+          <Route path="/" element={<Home/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/company" element={<Company/>}/>
+          <Route path="/newproject" element={<NewProject/>}/>
         </Routes>
       </Container>
 
-      <p>Footer</p>
+      <Footer/>
     </Router>
   );
 }

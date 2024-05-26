@@ -1,15 +1,21 @@
-* {
+:root {
 
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans';
+   --color-yellow: #FFBB33;
 
 }
 
-html, body, #root {
+* {
+
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans';
  
-  background-color: #efefef;
-  height: 100%;
-  
+}
+ 
+html, body, #root {
+
+   background-color: #efefef;
+   height: 100%;
+   
 }
