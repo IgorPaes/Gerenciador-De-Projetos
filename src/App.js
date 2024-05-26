@@ -9,23 +9,21 @@ import Container from './components/layouts/Container';
 function App() {
   return (
     <Router>
-      <ul>
+      <ul style={{ display: 'flex', listStyleType: 'none', padding: 0 }}>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
         <li><Link to='/company'>Company</Link></li>
         <li><Link to='/newproject'>New Project</Link></li>
       </ul>
 
-      <Routes>
-        <Route path="/" element={
-          <Container>
-            <Route index element={<Home/>} />
-            <Route path="contact" element={<Contact/>} />
-            <Route path="company" element={<Company/>} />
-            <Route path="newproject" element={<NewProject/>} />
-          </Container>
-        }/>
-      </Routes>
+      <Container customClass="min-height">
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/company" element={<Company/>} />
+          <Route path="/newproject" element={<NewProject/>} />
+        </Routes>
+      </Container>
 
       <p>Footer</p>
     </Router>
