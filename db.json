@@ -1,45 +1,12 @@
 {
   "projects": [
     {
-      "id": "d546",
-      "name": "NOME",
-      "budget": "5000",
+      "id": "d640",
+      "name": "sd",
+      "budget": "sadasd",
       "category": {
         "id": "1",
         "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "d052",
-      "budget": "4444",
-      "name": "PRojeto",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "bd93",
-      "name": "das",
-      "budget": "21312",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "fbce",
-      "name": "dasd",
-      "budget": "231",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": []
