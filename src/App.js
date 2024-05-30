@@ -10,23 +10,23 @@ import Footer from './components/layouts/Footer'
 import Projects from './components/pages/Projects';
 
 function App() {
-  return (
-    <Router>
-      <NavBar/>
-      
-      <Container customClass="min-height">
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/projects" element={<Projects/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/company" element={<Company/>}/>
-          <Route path="/newproject" element={<NewProject/>}/>
-        </Routes>
-      </Container>
+   return (
+      <Router>
+         <NavBar/>
 
-      <Footer/>
-    </Router>
-  );
+         <Container customClass="min-height">
+            <Routes>
+               <Route path="/" element={<Home/>}/>
+               <Route path="/projects" element={<Projects/>}/>
+               <Route path="/contact" element={<Contact/>}/>
+               <Route path="/company" element={<Company/>}/>
+               <Route path="/newproject" element={<NewProject/>}/>
+            </Routes>
+         </Container>
+
+         <Footer/>
+      </Router>
+   );
 }
 
 export default App;
