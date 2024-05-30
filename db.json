@@ -1,24 +1,66 @@
 {
-
-   "projects": [],
-   "categories": [
-      {
-         "id": 1,
-         "name": "Infra"
+  "projects": [
+    {
+      "id": "d546",
+      "name": "NOME",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
       },
-      {
-         "id": 2,
-         "name": "Desenvolvimento"
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d052",
+      "budget": "4444",
+      "name": "PRojeto",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      {
-         "id": 3,
-         "name": "Design"
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "bd93",
+      "name": "das",
+      "budget": "21312",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      {
-         "id": 4,
-         "name": "Planejamento"
-      }
-      
-   ]
-
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "fbce",
+      "name": "dasd",
+      "budget": "231",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
 }
