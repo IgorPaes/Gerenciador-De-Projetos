@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import styles from './Message.module.css'
 
-export function Message({type, msg}) {
+export function Message({text, type}) {
 
    const [visible, setVisible] = useState(false);
 
    useEffect(() => {
-      if (!msg) {
+      if (!text) {
          setVisible(false);
          return;
       }
@@ -17,12 +17,12 @@ export function Message({type, msg}) {
       }, 3000)
 
       return () => clearTimeout(timer)
-   }, [msg])
+   }, [text])
 
    return ( 
       <>
          {visible && (
-            <div className={`${styles.message} ${styles[type]}`}>{msg}</div>
+            <div className={`${styles.message} ${styles[type]}`}>{text}</div>
          )}
       </>
    )

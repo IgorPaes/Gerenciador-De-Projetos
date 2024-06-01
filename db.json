@@ -1,33 +1,58 @@
 {
-  "projects": [
-    {
-      "id": "d640",
-      "name": "sd",
-      "budget": "sadasd",
-      "category": {
-        "id": "1",
-        "name": "Infra"
+   "projects": [
+      {
+         "id": "d640",
+         "name": "Primeiro",
+         "budget": "2002",
+         "category": {
+            "id": "4",
+            "name": "Planejamento"
+         },
+         "cost": 1227,
+         "services": [
+            {
+               "name": "ALA",
+               "cost": "12",
+               "description": "dssa",
+               "id": "6683167f-80e3-4360-b7ed-19f795be1005"
+            },
+            {
+               "name": "Testeee",
+               "cost": "23",
+               "description": "sdasad",
+               "id": "f82ff49f-e101-43ca-ba4f-fe82e023ee27"
+            },
+            {
+               "name": "dsaa",
+               "cost": "2",
+               "description": "sadsa",
+               "id": "556aa0f0-5245-455b-a00a-49f780f78833"
+            },
+            {
+               "name": "dsad",
+               "cost": "2",
+               "description": "sad",
+               "id": "97fe0efd-89c6-4ac0-ab7d-115f330ffcc1"
+            }
+         ]
+      }
+   ],
+   "categories": [
+      {
+         "id": "1",
+         "name": "Infra"
       },
-      "cost": 0,
-      "services": []
-    }
-  ],
-  "categories": [
-    {
-      "id": "1",
-      "name": "Infra"
-    },
-    {
-      "id": "2",
-      "name": "Desenvolvimento"
-    },
-    {
-      "id": "3",
-      "name": "Design"
-    },
-    {
-      "id": "4",
-      "name": "Planejamento"
-    }
-  ]
+      {
+         "id": "2",
+         "name": "Desenvolvimento"
+      },
+      {
+         "id": "3",
+         "name": "Design"
+      },
+      {
+         "id": "4",
+         "name": "Planejamento"
+      }
+   ]
 }
