@@ -13,7 +13,7 @@ import { parse, v4 as uuidv4 } from 'uuid';
 function Project() {
 
    const { id } = useParams();
-   
+
    const [project, setProject] = useState();
    const [services, setServices] = useState([])
    const [showProjectForm, setShowProjectForm] = useState(false);
@@ -88,18 +88,38 @@ function Project() {
          },
          body: JSON.stringify(sProject),
       }).then(resp => resp.json()).then((data) => {
-         sProject.cost = newCost;
          setShowServiceForm(false);
-         // setMessage({
-         //    text: 'Serviço atualizado!',
-         //    type: 'success',
-         // });
+         setMessage({
+            text: 'Serviço adicionado!',
+            type: 'success',
+         });
       }).catch(err => console.log(err))
       
    }
 
-   function removeService() {
-      
+   function removeService(id, cost) {
+     
+      const serviceUpdate = project.services.filter((service) => service.id !== id);
+
+      const projectUpdated = project;
+      projectUpdated.services = serviceUpdate;
+      projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+      fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+         method: 'PATCH',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(projectUpdated),
+      }).then((response) => response.json()).then((data) => {
+         setProject(projectUpdated);
+         setServices(serviceUpdate);
+         setMessage({
+            text: 'Serviço removido com sucesso!',
+            type: 'success',
+         });
+      }).catch(err => console.log(err));
+
    }
 
    function toggleProjectForm() {
@@ -123,9 +143,9 @@ function Project() {
                   </button>
                   {!showProjectForm ? (
                      <div className={styles.project_info}>
-                        {/* <p><span>Categoria: </span> {project.category.name}</p> */}
-                        <p><span>Total de orçamento</span> R${project.budget}</p>
-                        <p><span>Total utilizado</span> R${project.cost}</p>
+                        <p><span>Categoria: </span>{project.category.name}</p>
+                        <p><span>Total de orçamento: </span>R${project.budget}</p>
+                        <p><span>Total utilizado: </span>R${project.cost}</p>
                      </div>
                   ) : (
                      <div className={styles.project_info}>
